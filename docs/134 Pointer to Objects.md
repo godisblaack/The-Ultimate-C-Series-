@@ -188,6 +188,7 @@ public:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -328,6 +329,7 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -419,7 +421,7 @@ int main() {
 }
 ```
 
-## Exercise
+## 10. Exercise
 
 ### SmartPointer.h
 

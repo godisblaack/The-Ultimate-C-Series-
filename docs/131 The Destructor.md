@@ -169,6 +169,7 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 

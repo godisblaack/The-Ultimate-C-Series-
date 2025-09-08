@@ -72,6 +72,8 @@ Rectangle::Rectangle(int width, int height) {
 ### **Parentheses**
 ```cpp
 Rectangle r(10, 20);
+// Same as above
+// Rectangle r = {10, 20};
 ```
 
 ### **Curly Braces (Modern C++)**
@@ -80,6 +82,66 @@ Rectangle r{10, 20};
 ```
 - Preferred in modern C++ for **uniform initialization**.
 - Both forms are mostly equivalent, but curly braces avoid **narrowing conversions**.
+
+### 4.1. Rectangle rectangle = {10, 20};
+
+This is called *brace initialization* or *uniform initialization*, introduced in C++11. Since your class Rectangle has a constructor that takes two int parameters:
+
+```cpp
+Rectangle::Rectangle(int width, int height);
+```
+
+The initialization:
+
+```cpp
+Rectangle rectangle = {10, 20};
+```
+
+is equivalent to:
+
+```cpp
+Rectangle rectangle(10, 20);
+```
+
+So it *will call the constructor* and initialize the object correctly.
+
+---
+
+### 4.2. Rectangle rectangle = (10, 20);
+
+This line:
+
+```cpp
+Rectangle rectangle = (10, 20);
+```
+
+*does NOT call the constructor with arguments 10 and 20*.
+
+Instead, it’s interpreted using the *comma operator* in C++. The expression:
+
+```cpp
+(10, 20)
+```
+
+evaluates to 20, discarding 10.
+
+So you're essentially writing:
+
+```cpp
+Rectangle rectangle = 20;
+```
+
+But your class Rectangle does *not* have a constructor that takes a single int, so this will result in a *compiler error* like:
+
+
+`error: no viable conversion from 'int' to 'Rectangle'`
+
+
+| Initialization                    | Will It Work? | Explanation                                                |
+| --------------------------------- | ------------- | ---------------------------------------------------------- |
+| Rectangle rectangle = {10, 20}; | ✅ Yes         | Calls the two-arg constructor using uniform initialization |
+| Rectangle rectangle = (10, 20); | ❌ No          | Treated as Rectangle rectangle = 20;, which is invalid   |
+
 
 ---
 
@@ -263,6 +325,7 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -274,7 +337,7 @@ Rectangle::Rectangle(int width, int height) {
 }
 
 void Rectangle::draw() {
-    cout << "Drawaing a rectanle" << endl;
+    cout << "Drawaing a rectangle" << endl;
     cout << "Dimensions: " << width << ", " << height << endl;
 }
 
@@ -282,7 +345,7 @@ int Rectangle::getArea() {
     return width * height;
 }
 
-int Rectangel::getWidth() {
+int Rectangle::getWidth() {
     return width;
 }
 

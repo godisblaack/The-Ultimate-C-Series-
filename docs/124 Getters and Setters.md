@@ -63,6 +63,7 @@
 ### 🚨 Input Validation
 - Use `throw invalid_argument("parameter")` to reject bad input.
 - Prevents object from entering invalid state.
+- The exception `invalid_argument()` is defined in `stdexcept` header file. Mosh forgot to include it in the `Rectangle.cpp`. Include it as `#include <stdexcept>`.
 - Example:
   ```cpp
   if (height < 0) throw invalid_argument("height");
@@ -279,6 +280,7 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
@@ -333,7 +335,7 @@ int main() {
 }
 ```
 
-## Exercise
+## 11. Exercise
 
 ### TextBox.h
 
@@ -351,7 +353,7 @@ public:
     void setValue(const string& value);
 private:
     string value;
-}
+};
 
 #endif
 ```

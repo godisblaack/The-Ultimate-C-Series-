@@ -164,8 +164,10 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
+
 Rectangle::Rectangle() {}
 
 Rectangle::Rectangle(int width, int height) {
@@ -245,8 +247,10 @@ private:
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
+
 Rectangle::Rectangle(int width, int height) {
     cout << "Constructing a Rectangle" << endl;
 

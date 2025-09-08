@@ -214,7 +214,7 @@ int main() {
 }
 ```
 
-## Exercise
+## 11. Exercise
 
 ### TextBox.h
 
@@ -235,7 +235,7 @@ public:
     void setValue(const string& value);
 private:
     string value;
-}
+};
 
 #endif
 ```

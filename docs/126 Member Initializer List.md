@@ -205,6 +205,7 @@ void Rectangle::setHeight(int height) {
 #include "Rectangle.h"
 
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
