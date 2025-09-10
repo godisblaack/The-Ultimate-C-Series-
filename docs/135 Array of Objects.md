@@ -303,7 +303,6 @@ int main() {
         rect.draw();
     }
 
-
     return 0;
 }
 ```
