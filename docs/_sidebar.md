@@ -64,3 +64,31 @@
 
 [150 Inline Functions](150%20Inline%20Functions.md)
 
+[151 Introduction](151%20Introduction.md)
+
+[152 Inheritance](152%20Inheritance.md)
+
+[153 Protected Members](153%20Protected%20Members.md)
+
+[154 Constructors and Inheritance](154%20Constructors%20and%20Inheritance.md)
+
+[155 Destructors and Inheritance](155%20Destructors%20and%20Inheritance.md)
+
+[156 Conversion between Base and Derived Classes](156%20Conversion%20between%20Base%20and%20Derived%20Classes.md)
+
+[157 Overriding Methods](157%20Overriding%20Methods.md)
+
+[158 Polymorphism](158%20Polymorphism.md)
+
+[159 Polymorphic Collections](159%20Polymorphic%20Collections.md)
+
+[160 Virtual Destructors](160%20Virtual%20Destructors.md)
+
+[161 Abstract Classes](161%20Abstract%20Classes.md)
+
+[162 Final Classes and Methods](162%20Final%20Classes%20and%20Methods.md)
+
+[163 Deep Inheritance Hierarchies](163%20Deep%20Inheritance%20Hierarchies.md)
+
+[164 Multiple Inheritance](164%20Multiple%20Inheritance.md)
+
