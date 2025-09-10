@@ -196,6 +196,7 @@ public:
 private:
     int* values;
     size_t size;
+};
 
 #endif
 ```
@@ -208,7 +209,7 @@ private:
 #include <stdexcept>
 
 Array::Array(size_t size) {
-    int* values = new int[size];
+    values = new int[size];
 
     this->size = size;
 }
