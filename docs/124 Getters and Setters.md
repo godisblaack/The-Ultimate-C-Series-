@@ -290,7 +290,7 @@ int Rectangle::getArea() {
     return width * height;
 }
 
-int Rectangel::getWidth() {
+int Rectangle::getWidth() {
     return width;
 }
 
